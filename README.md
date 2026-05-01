@@ -46,9 +46,11 @@ LangChain RAG Pipeline
 OpenAI API + MCP Web Search
   ↓
 Response returned to frontend
-##Project Structure
+```
+## Project Structure
+
+```text
 social-ai-rag-agent/
-  public/
   src/
     components/
       ChatComponent.js
@@ -56,79 +58,14 @@ social-ai-rag-agent/
       RenderQA.js
     App.js
     index.js
+
   server/
     server.js
     chat.js
     chat-mcp.js
     mcp-server.js
-    uploads/
     .env.example
-    package.json
+
   package.json
   README.md
-Getting Started
-1. Clone the repository
-git clone https://github.com/YOUR_USERNAME/social-ai-rag-agent.git
-cd social-ai-rag-agent
-2. Install frontend dependencies
-npm install
-3. Install backend dependencies
-cd server
-npm install
-cd ..
-4. Configure environment variables
-
-Create a .env file inside the server/ directory:
-
-OPENAI_API_KEY=your_openai_api_key_here
-SERPAPI_API_KEY=your_serpapi_key_here
-PORT=5001
-5. Run the application
-
-To start both frontend and backend:
-
-npm run dev
-
-Or run them separately:
-
-npm start
-cd server
-npm start
-
-Frontend runs on:
-
-http://localhost:3000
-
-Backend runs on:
-
-http://localhost:5001
-Main API Endpoints
-Upload PDF
-POST /upload
-
-Uploads a PDF document for processing.
-
-Ask Question
-GET /chat?question=your_question_here
-
-Returns an AI-generated answer using document context and optional web search.
-
-Screenshots
-
-Add screenshots here:
-
-/screenshots/home.png
-/screenshots/upload.png
-/screenshots/chat-result.png
-What I Learned
-Built a full-stack AI application with React and Express
-Implemented PDF ingestion and document-based semantic search
-Used LangChain to structure a Retrieval-Augmented Generation workflow
-Integrated external tools through MCP and SerpAPI
-Improved understanding of API orchestration, environment configuration, and AI-powered application design
-Future Improvements
-Add persistent vector database storage
-Add user authentication
-Add chat history
-Improve file validation and error handling
-Deploy frontend and backend using cloud services
+```
