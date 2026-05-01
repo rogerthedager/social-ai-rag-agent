@@ -69,3 +69,57 @@ social-ai-rag-agent/
   package.json
   README.md
 ```
+## Getting Started
+
+```text
+1. Clone the repository
+git clone https://github.com/YOUR_USERNAME/social-ai-rag-agent.git
+cd social-ai-rag-agent
+2. Install frontend dependencies
+npm install
+3. Install backend dependencies
+cd server
+npm install
+cd ..
+4. Configure environment variables
+
+Create a .env file inside the server/ directory:
+
+OPENAI_API_KEY=your_openai_api_key_here
+SERPAPI_API_KEY=your_serpapi_key_here
+PORT=5001
+5. Run the application
+
+To start both frontend and backend:
+
+npm run dev
+
+Or run them separately:
+
+Frontend:
+
+npm start
+
+Backend:
+
+cd server
+npm start
+
+Frontend runs on:
+
+http://localhost:3000
+
+Backend runs on:
+
+http://localhost:5001
+Main API Endpoints
+Upload PDF
+POST /upload
+
+Uploads a PDF document for processing.
+
+Ask Question
+GET /chat?question=your_question_here
+
+Returns an AI-generated answer using document context and optional web search.
+```
