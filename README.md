@@ -1,74 +1,3 @@
-# Social AI RAG Agent
-
-A full-stack AI assistant that supports PDF document ingestion, semantic question answering, voice interaction, and hybrid web search using React, Node.js, LangChain, OpenAI API, and MCP-based tool integration.
-
-## Features
-
-- Upload PDF documents and ask questions based on their content
-- Generate context-aware answers using a Retrieval-Augmented Generation (RAG) pipeline
-- Use LangChain for document processing, chunking, retrieval, and LLM orchestration
-- Support voice input and text-to-speech responses through React speech libraries
-- Integrate MCP-based web search with SerpAPI to combine document retrieval and external search results
-- Provide a React frontend and Express backend for full-stack interaction
-
-## Tech Stack
-
-**Frontend**
-- React
-- Ant Design
-- Axios
-- react-speech-recognition
-- speak-tts
-
-**Backend**
-- Node.js
-- Express
-- LangChain
-- OpenAI API
-- Model Context Protocol SDK
-- SerpAPI
-- Multer
-- pdf-parse
-
-## Architecture
-
-```text
-User
-  ↓
-React Frontend
-  ↓
-Express API Server
-  ↓
-PDF Upload / Query Handler
-  ↓
-LangChain RAG Pipeline
-  ↓
-OpenAI API + MCP Web Search
-  ↓
-Response returned to frontend
-```
-## Project Structure
-
-```text
-social-ai-rag-agent/
-  src/
-    components/
-      ChatComponent.js
-      PdfUploader.js
-      RenderQA.js
-    App.js
-    index.js
-
-  server/
-    server.js
-    chat.js
-    chat-mcp.js
-    mcp-server.js
-    .env.example
-
-  package.json
-  README.md
-```
 ## Getting Started
 
 ### 1. Clone the repository
@@ -77,61 +6,86 @@ social-ai-rag-agent/
 git clone https://github.com/rogerthedager/social-ai-rag-agent.git
 cd social-ai-rag-agent
 ```
-2. Install frontend dependencies
+
+### 2. Install frontend dependencies
+
 ```bash
 npm install
 ```
-3. Install backend dependencies
+
+### 3. Install backend dependencies
+
 ```bash
 cd server
 npm install
 cd ..
 ```
-4. Configure environment variables
-```bash
-Create a .env file inside the server/ directory:
 
+### 4. Configure environment variables
+
+Create a `.env` file inside the `server/` directory:
+
+```env
 OPENAI_API_KEY=your_openai_api_key_here
 SERPAPI_API_KEY=your_serpapi_key_here
 PORT=5001
 ```
-5. Run the application
-```bash
+
+### 5. Run the application
+
 To start both frontend and backend:
 
+```bash
 npm run dev
+```
 
 Or run them separately.
 
 Frontend:
 
+```bash
 npm start
+```
 
 Backend:
 
+```bash
 cd server
 npm start
+```
 
 Frontend runs on:
 
+```text
 http://localhost:3000
+```
 
 Backend runs on:
 
+```text
 http://localhost:5001
 ```
-Main API Endpoints
-Upload PDF
+
+## Main API Endpoints
+
+### Upload PDF
+
+```http
 POST /upload
+```
 
 Uploads a PDF document for processing.
 
-Ask Question
+### Ask Question
+
+```http
 GET /chat?question=your_question_here
+```
 
 Returns an AI-generated answer using document context and optional web search.
 
-Screenshots
+## Screenshots
+
 Main Interface
 <img width="1650" height="964" alt="image" src="https://github.com/user-attachments/assets/ac0d4571-cb31-4ade-8c96-d2663ffb3163" />
 PDF Upload
@@ -139,14 +93,18 @@ PDF Upload
 AI Response
 <img width="1739" height="1202" alt="image" src="https://github.com/user-attachments/assets/5ffa3644-c15b-47fe-9b1f-bff3d5eac497" />
 
-What I Learned
-Built a full-stack AI application with React and Express
-Implemented PDF ingestion and document-based semantic search
-Used LangChain to structure a Retrieval-Augmented Generation workflow
-Integrated external tools through MCP and SerpAPI
-Improved understanding of API orchestration, environment configuration, and AI-powered application design
-Future Improvements
-Add persistent vector database storage
-Add user authentication
-Add chat history
-Improve file validation and error handling
+## What I Learned
+
+- Built a full-stack AI application with React and Express
+- Implemented PDF ingestion and document-based semantic search
+- Used LangChain to structure a Retrieval-Augmented Generation workflow
+- Integrated external tools through MCP and SerpAPI
+- Improved understanding of API orchestration, environment configuration, and AI-powered application design
+
+## Future Improvements
+
+- Add persistent vector database storage
+- Add user authentication
+- Add chat history
+- Improve file validation and error handling
+- Deploy frontend and backend using cloud services
