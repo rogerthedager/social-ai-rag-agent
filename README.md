@@ -130,3 +130,23 @@ Ask Question
 GET /chat?question=your_question_here
 
 Returns an AI-generated answer using document context and optional web search.
+
+Screenshots
+Main Interface
+<img width="1650" height="964" alt="image" src="https://github.com/user-attachments/assets/ac0d4571-cb31-4ade-8c96-d2663ffb3163" />
+PDF Upload
+<img width="1633" height="978" alt="image" src="https://github.com/user-attachments/assets/b502340a-0764-4ecd-9df9-d686347d5f1d" />
+AI Response
+<img width="1739" height="1202" alt="image" src="https://github.com/user-attachments/assets/5ffa3644-c15b-47fe-9b1f-bff3d5eac497" />
+
+What I Learned
+Built a full-stack AI application with React and Express
+Implemented PDF ingestion and document-based semantic search
+Used LangChain to structure a Retrieval-Augmented Generation workflow
+Integrated external tools through MCP and SerpAPI
+Improved understanding of API orchestration, environment configuration, and AI-powered application design
+Future Improvements
+Add persistent vector database storage
+Add user authentication
+Add chat history
+Improve file validation and error handling
