@@ -77,17 +77,17 @@ social-ai-rag-agent/
 git clone https://github.com/rogerthedager/social-ai-rag-agent.git
 cd social-ai-rag-agent
 ```
-###2. Install frontend dependencies
+2. Install frontend dependencies
 ```bash
 npm install
 ```
-###3. Install backend dependencies
+3. Install backend dependencies
 ```bash
 cd server
 npm install
 cd ..
 ```
-###4. Configure environment variables
+4. Configure environment variables
 ```bash
 Create a .env file inside the server/ directory:
 
@@ -95,7 +95,7 @@ OPENAI_API_KEY=your_openai_api_key_here
 SERPAPI_API_KEY=your_serpapi_key_here
 PORT=5001
 ```
-###5. Run the application
+5. Run the application
 ```bash
 To start both frontend and backend:
 
