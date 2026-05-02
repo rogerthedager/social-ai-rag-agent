@@ -49,7 +49,13 @@ OpenAI API + MCP Web Search
   ↓
 Response returned to frontend
 ```
+## Key Implementation Details
 
+- Built a React frontend for PDF upload, chat-based Q&A, voice input, and text-to-speech interaction.
+- Implemented an Express backend to handle file uploads, API routing, and AI query orchestration.
+- Used LangChain to process PDF text, split documents into chunks, and generate context-aware responses.
+- Integrated OpenAI API for language model responses and SerpAPI through MCP-based tooling for external web search.
+- Separated frontend and backend dependencies to support independent development and deployment.
 ## Project Structure
 
 ```text
@@ -164,11 +170,11 @@ Returns an AI-generated answer using document context and optional web search.
 
 ## Screenshots
 
-Main Interface
+### Main Interface
 <img width="1650" height="964" alt="image" src="https://github.com/user-attachments/assets/ac0d4571-cb31-4ade-8c96-d2663ffb3163" />
-PDF Upload
+### PDF Upload
 <img width="1633" height="978" alt="image" src="https://github.com/user-attachments/assets/b502340a-0764-4ecd-9df9-d686347d5f1d" />
-AI Response
+### AI Response
 <img width="1739" height="1202" alt="image" src="https://github.com/user-attachments/assets/5ffa3644-c15b-47fe-9b1f-bff3d5eac497" />
 
 ## What I Learned
